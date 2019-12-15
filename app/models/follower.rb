@@ -29,6 +29,7 @@ class Follower
 
     def join_cult(cult_instance)
         cult_instance.recruit_follower(self)
+        binding.pry
     end
 
     def self.of_a_certain_age(age)
@@ -58,6 +59,20 @@ class Follower
         end
         most_active_array[0..9]
     end
+
+    def fellow_cult_members
+        Follower.all.select do |follower|
+            follower != self && follower.cults.any? do |cult|
+                self.cults.include?(cult)
+            end
+        end
+    end
 end
 
+
+# Follower#join_cult
+# takes in an argument of a Cult instance and adds this follower to the cult's list of followers
+# NOW this is changed such that if you don't meet the minimum age requirement of the given Cult instance:
+# do not let them join the cult
+# print out a friendly message informing them that they are too young
 

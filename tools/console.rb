@@ -7,10 +7,10 @@ end
 # Insert code here to run before hitting the binding.pry
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
-c1 = Cult.new("CoffeeAddicts", "NYC", 1997, "Coffee coffee coffee")
-c2 = Cult.new("TeaAddicts", "Boston", 1885, "T T T")
-c3 = Cult.new("MatchaAddicts", "LA", 2017, "Hell yea matcha")
-c4 = Cult.new("MateAddicts", "LA", 2014, "Buenas")
+c1 = Cult.new("CoffeeAddicts", "NYC", 1997, "Coffee coffee coffee", 21)
+c2 = Cult.new("TeaAddicts", "Boston", 1885, "T T T", 35)
+c3 = Cult.new("MatchaAddicts", "LA", 2017, "Hell yea matcha", 40)
+c4 = Cult.new("MateAddicts", "LA", 2014, "Buenas", 50)
 
 f1 = Follower.new("Susan", 37, "Just do it")
 f2 = Follower.new("Ted", 23, "I like coffee as black as my heart")
